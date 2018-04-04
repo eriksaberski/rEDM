@@ -107,10 +107,10 @@ simplex <- function(time_series, lib = c(1, NROW(time_series)), pred = lib,
                     stats_only = TRUE, exclusion_radius = NULL, epsilon = NULL, 
                     silent = FALSE)
 {
-  min_lib = lib[1]
-  min_lib = min_lib - E
-  if(min_lib<1){min_lib = 1}
-  lib = c(min_lib, lib[2])
+  min_pred = pred[1]
+  min_pred = min_pred - E
+  if(min_pred<1){min_pred = 1}
+  lib = c(min_pred, pred[2])
     # make new model object
     model <- new(LNLP)
     
