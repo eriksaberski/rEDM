@@ -209,6 +209,7 @@ std::vector<size_t> ForecastMachine::find_nearest_neighbors(const vec& dist)
                 if(curr_distance == dist[nearest_neighbors.back()]){
                     nearest_neighbors.insert(nearest_neighbors.size(), curr_lib);
                 }
+	    	}
 
                 // if we've added too many neighbors and there isn't a tie, then
                 // pop off the farthest neighbor
